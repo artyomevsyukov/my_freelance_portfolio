@@ -4,7 +4,6 @@
 font-family: 'DM Sans', sans-serif;
 font-family: 'Poppins', sans-serif;
  */
-
 html,
 body {
   font-family: "DM Sans", sans-serif;
@@ -13,7 +12,7 @@ body {
 .container {
   padding: 0 15px;
   margin: 0 auto;
-  width: 1200px;
+  max-width: 1200px;
 }
 /* NAV */
 .nav {
@@ -21,4 +20,58 @@ body {
   border-bottom: 1px solid #26292d;
   background-color: #171718;
   color: #fff;
+}
+.nav-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 30px;
+  row-gap: 20px;
+  flex-wrap: wrap;
+}
+.logo {
+  color: #fff;
+  font-family: Poppins;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0em;
+}
+
+.logo strong {
+  font-family: Poppins;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: 0em;
+}
+
+.nav-list {
+  display: flex;
+  align-items: center;
+  column-gap: 40px;
+  font-family: Poppins;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0em;
+}
+.nav-list__link {
+  color: #fff;
+}
+.nav-list__link--active {
+  position: relative;
+}
+
+.nav-list__link--active::before {
+  content: "";
+
+  position: absolute;
+  left: 0;
+  top: 100%;
+
+  display: block;
+  height: 2px;
+  width: 100%;
+  background-color: #5c62ec;
 }
