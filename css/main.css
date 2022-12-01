@@ -4,6 +4,19 @@
 font-family: 'DM Sans', sans-serif;
 font-family: 'Poppins', sans-serif;
  */
+
+:root {
+  --black: #171718;
+  --black-border: #171718;
+  --white: #fff;
+  --purple: #5c62ec;
+
+  --dark-bg: var(--black);
+  --dark-border: var(--black-border);
+  --header-text: var(--white);
+  --accent: var(--purple);
+}
+
 html,
 body {
   font-family: "DM Sans", sans-serif;
@@ -17,9 +30,9 @@ body {
 /* NAV */
 .nav {
   padding: 20px 0;
-  border-bottom: 1px solid #26292d;
-  background-color: #171718;
-  color: #fff;
+  border-bottom: 1px solid var(--dark-border);
+  background-color: var(--dark-bg);
+  color: var(--header-text);
 }
 .nav-row {
   display: flex;
@@ -30,7 +43,7 @@ body {
   flex-wrap: wrap;
 }
 .logo {
-  color: #fff;
+  color: var(--header-text);
   font-family: Poppins;
   font-size: 24px;
   font-weight: 400;
@@ -57,7 +70,8 @@ body {
   letter-spacing: 0em;
 }
 .nav-list__link {
-  color: #fff;
+  /* color: #fff; */
+  color: var(--header-text);
 }
 .nav-list__link--active {
   position: relative;
@@ -73,8 +87,6 @@ body {
   display: block;
   height: 2px;
   width: 100%;
-  background-color: #5c62ec;
-}
-
-.test {
+  /* background-color: #5c62ec; */
+  background-color: var(--accent);
 }
