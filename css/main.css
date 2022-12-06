@@ -75,7 +75,13 @@ body {
 .nav-list__link {
   /* color: #fff; */
   color: var(--header-text);
+  transition: opacity 0.2s ease-in;
 }
+
+.nav-list__link:hover {
+  opacity: 0.8;
+}
+
 .nav-list__link--active {
   position: relative;
 }
@@ -104,6 +110,10 @@ body {
   align-items: center;
 
   background-color: var(--dark-bg);
+  background-image: url(./../img/header-bg.png);
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: center;
   color: var(--header-text);
   text-align: center;
 }
@@ -148,4 +158,14 @@ body {
   letter-spacing: 0.15px;
   font-size: 16px;
   font-weight: 500;
+}
+
+.btn:hover {
+  opacity: 0.8;
+  transition: opacity 0.2s ease-in;
+}
+
+.btn:active {
+  position: relative;
+  top: 1px;
 }
