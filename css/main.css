@@ -142,6 +142,36 @@ body {
   /* background-color: #5c62ec; */
   background-color: var(--accent);
 }
+/* Dark mode btn */
+
+.dark-mode-btn {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  width: 51px;
+  height: 26px;
+  padding: 5px;
+
+  border-radius: 50px;
+  background-color: #272727;
+}
+
+.dark-mode-btn::before {
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  content: "";
+  display: block;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: var(--white);
+}
+.dark-mode-btn__item {
+  position: relative;
+  z-index: 9;
+}
+
 /* Header */
 
 .header {
