@@ -80,13 +80,15 @@ body {
 }
 .nav-row {
   display: flex;
-  justify-content: space-between;
+  /* justify-content: space-between; */
+  justify-content: flex-end; /* Для мобильной адобатции */
   align-items: center;
   column-gap: 30px;
   row-gap: 20px;
   flex-wrap: wrap;
 }
 .logo {
+  margin-right: auto; /* Для мобильной адобатции */
   color: var(--header-text);
   font-family: Poppins;
   font-size: 24px;
@@ -147,6 +149,7 @@ body {
 .dark-mode-btn {
   position: relative;
   display: flex;
+  order: 7; /* Для мобильной адобатции */
   justify-content: space-between;
   width: 51px;
   height: 26px;
@@ -166,10 +169,17 @@ body {
   height: 24px;
   border-radius: 50%;
   background-color: var(--white);
+  transition: left 0.2s ease-in;
 }
 .dark-mode-btn__item {
   position: relative;
   z-index: 9;
+}
+
+.dark-mode-btn--active::before {
+  /* left: unset;
+  right: 1px; */ /* если сделать так, то в момент переключения не юудет анимации, transition не работает */
+  left: 26px;
 }
 
 /* Header */
@@ -404,6 +414,15 @@ body {
     font-size: 40px;
   }
 
+  /* Nav */
+
+  .nav-row {
+    justify-content: space-between;
+  }
+
+  .dark-mode-btn {
+    order: 0;
+  }
   /* General */
 
   .section {
